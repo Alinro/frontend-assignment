@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test getFormData > returns the correct value according to the snapshot, when the form does not have any inputs 1`] = `"{}"`;
+
+exports[`test getFormData > returns the correct value according to the snapshot, when the form has an input 1`] = `"{\\"inputName\\":\\"inputValue\\"}"`;
