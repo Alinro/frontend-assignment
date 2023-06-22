@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite + TS</title>
+        <title>Frontend assignment</title>
     </head>
     <body>
         <div id="app">
@@ -33,9 +33,9 @@
                         <input type="number" id="ccv" name="ccv" min="100" max="999" required />
                     </div>
                     <div>
-                        <label for="month">Expiration date</label>
+                        <label for="expirationDate">Expiration date</label>
                         <!-- TODO: dynamic min date -->
-                        <input type="month" min="2023-06" id="month" name="month" required />
+                        <input type="month" min="2023-06" id="expirationDate" name="expirationDate" required />
                     </div>
                     <div>
                         <label for="cardType">Card type</label>
@@ -47,6 +47,7 @@
                     <div><button>Submit</button></div>
                 </form>
             </dialog>
+            <div id="success"></div>
         </div>
         <script type="module" src="/src/main.ts"></script>
     </body>
