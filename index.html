@@ -10,30 +10,40 @@
         <div id="app">
             <div class="card">
                 <form>
-                    <label for="cardHolderName">Card Holder Name</label>
-                    <input type="text" id="cardHolderName" minlength="5" required name="cardHolderName" />
-                    <label for="cardNumber">Card Number</label>
-                    <input
-                        type="tel"
-                        id="cardNumber"
-                        name="cardNumber"
-                        title="format"
-                        inputmode="numeric"
-                        pattern="[0-9\s]{16}"
-                        placeholder="xxxx xxxx xxxx xxxx"
-                    />
-                    <label for="ccv">CCV code</label>
-                    <input type="number" id="ccv" name="ccv" required />
-                    <label for="month">Month</label>
-                    <input type="number" id="month" name="month" required />
-                    <label for="year">Year</label>
-                    <input type="number" id="year" name="year" required />
-                    <label for="cardType">Card type</label>
-                    <select name="cardType" id="cardType">
-                        <option value="visa">VISA</option>
-                        <option value="mastercard">Mastercard</option>
-                    </select>
-                    <input type="submit" />
+                    <div>
+                        <label for="cardHolderName">Card Holder Name</label>
+                        <input type="text" id="cardHolderName" minlength="5" name="cardHolderName" required />
+                    </div>
+                    <div>
+                        <label for="cardNumber">Card Number</label>
+                        <input
+                            type="tel"
+                            id="cardNumber"
+                            name="cardNumber"
+                            title="Card number should be 16 digits"
+                            inputmode="numeric"
+                            pattern="[0-9\s]{4}\s?[0-9\s]{4}\s?[0-9\s]{4}\s?[0-9\s]{4}\s?"
+                            placeholder="xxxx xxxx xxxx xxxx"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="ccv">CCV code</label>
+                        <input type="number" id="ccv" name="ccv" min="100" max="999" required />
+                    </div>
+                    <div>
+                        <label for="month">Expiration date</label>
+                        <!-- TODO: dynamic min date -->
+                        <input type="month" min="2023-06" id="month" name="month" />
+                    </div>
+                    <div>
+                        <label for="cardType">Card type</label>
+                        <select name="cardType" id="cardType">
+                            <option value="visa">VISA</option>
+                            <option value="mastercard">Mastercard</option>
+                        </select>
+                    </div>
+                    <div><button>Submit</button></div>
                 </form>
             </div>
         </div>
