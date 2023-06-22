@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 const form = document.querySelector<HTMLFormElement>('form');
 
@@ -13,7 +13,8 @@ form?.addEventListener('submit', function () {
   console.log(JSON.stringify(result));
 
   const paragraph = document.createElement('p');
-  paragraph.innerHTML = "Your payment information was successfully submitted. Please check the data in the devtool console";
+  paragraph.innerHTML =
+    'Your payment information was successfully submitted. Please check the data in the devtool console';
 
-  document.querySelector("#success")?.appendChild(paragraph);
-})
+  document.querySelector('#success')?.appendChild(paragraph);
+});
