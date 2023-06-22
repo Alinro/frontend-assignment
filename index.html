@@ -35,7 +35,14 @@
                     <div>
                         <label for="expirationDate">Expiration date</label>
                         <!-- TODO: dynamic min date -->
-                        <input type="month" min="2023-06" id="expirationDate" name="expirationDate" required />
+                        <input
+                            type="month"
+                            min="2023-06"
+                            max="2099-12"
+                            id="expirationDate"
+                            name="expirationDate"
+                            required
+                        />
                     </div>
                     <div>
                         <label for="cardType">Card type</label>
