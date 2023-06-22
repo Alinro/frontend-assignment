@@ -6,6 +6,8 @@ export const getFormData = (form: HTMLFormElement): string => {
         result[key] = value;
     }
 
+    // TODO: maybe remove the optional spaces from the card number
+
     return JSON.stringify(result);
 }
 
