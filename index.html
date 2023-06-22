@@ -8,8 +8,9 @@
     </head>
     <body>
         <div id="app">
-            <div class="card">
-                <form>
+            <dialog open>
+                <p>Payment information</p>
+                <form method="dialog">
                     <div>
                         <label for="cardHolderName">Card Holder Name</label>
                         <input type="text" id="cardHolderName" minlength="5" name="cardHolderName" required />
@@ -34,7 +35,7 @@
                     <div>
                         <label for="month">Expiration date</label>
                         <!-- TODO: dynamic min date -->
-                        <input type="month" min="2023-06" id="month" name="month" />
+                        <input type="month" min="2023-06" id="month" name="month" required />
                     </div>
                     <div>
                         <label for="cardType">Card type</label>
@@ -45,7 +46,7 @@
                     </div>
                     <div><button>Submit</button></div>
                 </form>
-            </div>
+            </dialog>
         </div>
         <script type="module" src="/src/main.ts"></script>
     </body>
